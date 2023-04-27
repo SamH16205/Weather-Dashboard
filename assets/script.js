@@ -23,7 +23,7 @@ if (localStorage.length !== 0){
 localStorage.setItem("cities", JSON.stringify(history))
 }
 
-fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=976b9a4c772c56a631ad20598451da86')
+fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=976b9a4c772c56a631ad20598451da86')
 .then(function(response){
     return response.json()
 })
@@ -93,7 +93,7 @@ function searchHistory(){
     historyButton.on("click", function(){
         var city = historyButton.text()
 
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=976b9a4c772c56a631ad20598451da86')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=976b9a4c772c56a631ad20598451da86')
     .then(function(response){
         return response.json()
     })
