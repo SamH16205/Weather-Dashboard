@@ -2,7 +2,9 @@
 // lat and long api: http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid={API key}
 var weatherCards = [$('#day1'), $('#day2'), $('#day3'), $('#day4'),$('#day5')]
 
+if (localStorage.length !== 0){
 searchHistory()
+}
 
 $("#search").on("click", function(){
 var city = $("#search-area").val()
